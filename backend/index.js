@@ -2,6 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const app = express();
+let cors = require("cors");
+var corsOptions = {
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  optionsSuccessStatus: 200, // For legacy browser support
+};
+app.use(cors(corsOptions));
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://chandrasekhar:chandrasekhar@hostel.3xv4xl5.mongodb.net/?retryWrites=true&w=majority', {
