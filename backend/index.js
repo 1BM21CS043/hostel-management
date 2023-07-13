@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://username:password@users.lmftkim.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://chandrasekhar:chandrasekhar@hostel.3xv4xl5.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -16,12 +16,11 @@ db.once('open', () => {
 
 // Create a schema for the user
 const userSchema = new mongoose.Schema({
-  usn: { type: String, required: true },
   name: { type: String, required: true },
-  semester: { type: String, required: true },
-  branch: { type: String, required: true },
-  email: { type: String, required: true },
-  username: { type: String, required: true },
+  usn: { type: String, required: true },
+  address: { type: String, required: true },
+  guardian_name: { type: String, required: true },
+  guardian_contact: { type: String, required: true },
   password: { type: String, required: true },
 });
 
@@ -32,24 +31,24 @@ app.use(express.json());
 // Signup route
 app.post('/signup', async (req, res) => {
   try {
-    const { usn, name, semester, branch, email } = req.body;
+    const { name, usn, address, guardian_name, guardian_contact, password } = req.body;
 
     // Check if the user already exists
-    const existingUser = await User.findOne({ email });
+    const existingUser = await User.findOne({ usn });
     if (existingUser) {
-      return res.status(409).json({ error: 'User already exists' });
+      return res.status(409).json({ error: 'USN already exists' });
     }
-    const password = usn
+
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Create a new user
     const newUser = new User({
-      usn,
       name,
-      semester,
-      branch,
-      email,
+      usn,
+      address,
+      guardian_name,
+      guardian_contact,
       password: hashedPassword,
     });
 
@@ -66,18 +65,18 @@ app.post('/signup', async (req, res) => {
 // Login route
 app.post('/login', async (req, res) => {
   try {
-    const { username, password } = req.body;
+    const { usn, password } = req.body;
 
     // Check if the user exists
-    const user = await User.findOne({ username });
+    const user = await User.findOne({ usn });
     if (!user) {
-      return res.status(401).json({ error: 'Invalid Username or Password' });
+      return res.status(401).json({ error: 'Invalid USN or Password' });
     }
 
     // Compare the provided password with the stored password
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
-      return res.status(401).json({ error: 'Invalid email or password' });
+      return res.status(401).json({ error: 'Invalid USN or Password' });
     }
 
     res.status(200).json({ message: 'Login successful' });
