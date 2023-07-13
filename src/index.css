@@ -1,0 +1,286 @@
+body {
+  margin: 0;
+  overflow : auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color : white;
+}
+::-webkit-scrollbar {
+  width: 0; 
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.app{
+  height: auto;
+  background-image: url('./images/hostel.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position : relative;
+}
+.content-area{
+  height: 87vh;
+}
+
+.about {
+  background-image: url('./images/ohcampus_bmsce1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: inherit;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+.glass{
+  width: 50vw;
+  height: 30vh;
+  background-color: #ffffffa3 ;
+  border-radius: 15px;
+  border-color: black;
+  padding : 20px;
+  border-width: 40px;
+  box-shadow: #333;
+  height: auto;
+  justify-content: center;
+}
+.glass p{
+  color :rgb(125, 83, 83);
+  font-size : 3vh;
+  font-family : "Nunito", monospace;
+
+}
+.notice-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding : 2vh;
+}
+
+.notice-page .notice-banner{
+  width: inherit;
+}
+.content{
+  height: inherit;
+  display: grid;
+  gap : 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-rows : 100px;
+  padding: 3vw;
+  
+}
+.notice-heading{
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 900;
+  font-size: 30px;
+  border-bottom: rgb(121, 30, 30);
+  z-index: 200;
+  border-radius: 14px;
+  border-color: white;
+  border-width: 10px;
+
+}
+.notice-list {
+  overflow: scroll;
+  padding: 2vh;  
+  font-size: 3vh; 
+  height: 55vh;
+  border-radius: 14px;
+  border-color: white;
+  border-width: 10px;   
+}
+
+
+.notice-banner{
+  color : rgb(44, 41, 41);
+  background-color: rgba(252, 252, 252, 0.964);
+  width: 30vw;
+  grid-row : 2 / 4;
+  grid-column: 4;
+  border-radius: 14px;
+  border-color: white;
+  border-width: 10px;
+  overflow: scroll;
+}
+
+/* Navigation.css */
+.nav {
+  background-color: rgba(55, 55, 55, 0.695);
+  height: 10vh;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+/* Footer.css */
+.footer {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  text-align: center;
+  height : 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.school-title{
+  font-size : 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color : rgb(255,255,255);
+}
+
+li{
+
+}
+button{
+
+}
+ul{
+  margin : 0 !important;
+  height: inherit;
+  margin-left: 4vw;
+  margin-right : 4vw;
+  font-family: 'Roboto Mono', monospace;
+  font-size : 3vh;
+}
+
+a{
+
+}
+
+/* CSS */
+.button-36 {
+  background: rgba(254, 254, 254, 0);
+  border-radius: 8px;
+  border-style: 2px white solid;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  font-weight: 900;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-36:hover {
+  box-shadow: rgba(253, 253, 253, 0) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  .button-36 {
+    padding: 0 2.6rem;
+  }
+}
+
+.hostel-banner{
+  background-color: rgba(255, 255, 255, 0.348);
+  grid-column : 1 / 7;
+  font-family: 'Roboto Mono', monospace;
+  border-radius : 15px;
+  border-color: #ffffff;
+  border-width: 10px;
+  font-size: 50px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color : black;
+}
+
+
+.about-heading {
+  display : flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 0.5rem;
+  font-size: 50px;
+
+}
+
+.about .glass p {
+  color: rgb(0, 0, 0);
+  font-size : 2.5vh;
+}
+
+.registration-form{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color : black;
+}
+
+.form-container{
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-element{
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  width: inherit;
+  justify-content: space-evenly;
+  background-color: rgba(241, 240, 240, 0.25);
+  padding: 2vh;
+  font-size: 5vh;
+}
+
+input[type=text]{
+  height: 5vh;
+  width: 100%;
+  margin: 1vh;
+  border : 2px solid black;
+}
+
+input[type=submit]{
+  height: 5vh;
+  width: 100%;
+  margin: 1vh;
+  border : 2px solid black;
+}
