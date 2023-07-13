@@ -277,10 +277,25 @@ input[type=text]{
   margin: 1vh;
   border : 2px solid black;
 }
+input[type=password]{
+  height: 5vh;
+  width: 100%;
+  margin: 1vh;
+  border : 2px solid black;
+}
 
+.react-tel-input .form-control{
+  width: 100% !important;
+}
 input[type=submit]{
   height: 5vh;
   width: 100%;
   margin: 1vh;
   border : 2px solid black;
+}
+
+
+.submitbutton{
+  padding: 10px;
+  cursor: pointer;
 }
