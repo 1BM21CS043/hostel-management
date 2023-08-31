@@ -13,3 +13,11 @@ jobs:
       
     - name: Build the docker
       run: docker-compose up --build -d
+    
+    - name: Deploy
+      uses: mr-smithers-excellent/docker-build-push@v4
+      with:
+        image: 1bm21cs043/hostel_management
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
