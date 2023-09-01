@@ -1,4 +1,4 @@
-name: Hostem Management
+name: Hostel Management
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
           context: ./client
           file: ./client/Dockerfile-client
           push: true
-          tags: 1bm21cs043/hostel_management:latest
+          tags: 1bm21cs043/hostel_management:frontend-latest
 
       - name: Build and push Node.js backend Docker image
         uses: docker/build-push-action@v2
@@ -34,4 +34,4 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile-backend
           push: true
-          tags: 1bm21cs043/hostel_management:latest
+          tags: 1bm21cs043/hostel_management:backend-latest
