@@ -4,6 +4,7 @@ function Footer() {
   return (
     <div className = "footer">
       <p>Copyright 2023 BMSETH Hostel</p>
+      <p>For DevOps Project</p>
     </div>
   );
 }
