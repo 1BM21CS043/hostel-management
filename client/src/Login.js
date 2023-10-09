@@ -45,9 +45,10 @@ const Login = () => {
             <div className="hero">
                 <div className="form-box">
                     <div className="button-box">
-                        <div id="btn"></div>
-                        <button type="button" className="toggle-btn" onClick={redirectHome}>Log In</button>
-                        {/* <button type="button" className="toggle-btn" onClick="Register()">Register</button> */}
+                        <div id="btn">
+
+                        <h1 style={{color:"black"}}>Login</h1>
+                        </div>
                     </div>
                     <br/><br/><br/>
                     <div className="social-icons">
