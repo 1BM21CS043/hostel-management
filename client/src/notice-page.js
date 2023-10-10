@@ -7,7 +7,7 @@ const NoticePage = () => (
         <div className = 'notice-list'>
         <ul >
             <li>
-                CIRCULAR : Registration Instruction for students 12/09/223
+                CIRCULAR : Registration Instruction for students 01/10/23
             </li>
             <li>
                 CIRCULAR : Hostel Fees and Deposits
