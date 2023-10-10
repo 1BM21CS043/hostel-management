@@ -9,7 +9,7 @@ function Notice() {
     <div className = 'notice-list'>
       <ul >
         <li>
-            CIRCULAR : Registration Instruction for students 12/09/23
+            CIRCULAR : Registration Instruction for students 01/09/23
         </li>
         <li>
             CIRCULAR : Hostel Fees and Deposits
